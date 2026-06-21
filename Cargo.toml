@@ -3578,6 +3578,30 @@ category = "Stress Tests"
 wasm = true
 
 [[example]]
+name = "many_text"
+path = "examples/stress_tests/many_text.rs"
+doc-scrape-examples = true
+
+[package.metadata.example.many_text]
+name = "Many Text"
+description = "Displays many UI Text nodes. Used for performance testing."
+category = "Stress Tests"
+wasm = true
+
+[[example]]
+name = "many_meshlet_materials"
+path = "examples/stress_tests/many_meshlet_materials.rs"
+doc-scrape-examples = true
+required-features = ["meshlet", "https"]
+
+[package.metadata.example.many_meshlet_materials]
+name = "Many Meshlet Materials"
+description = "Benchmark to test rendering many meshlet materials (experimental)"
+category = "Stress Tests"
+# Requires compute shaders and WGPU extensions, not supported by WebGL nor WebGPU.
+wasm = false
+
+[[example]]
 name = "many_materials"
 path = "examples/stress_tests/many_materials.rs"
 doc-scrape-examples = true
